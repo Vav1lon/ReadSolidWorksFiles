@@ -1,6 +1,28 @@
+*.ipr
+*.iws
+*.iml
+*.ids
+target
 *.class
+*/test/reports/html*
+*/test/reports/plain*
+*/test/reports/*
+*/test-output/*
+*.log.*
+*.log
+*test-output/*
+*.orig
+*out/*
+*/src/main/config/local*
+*/src/main/groovy/local*
+.project
+.tmp_*
+*tmp_*
+*Thumbs.db
+*.sql~
+q
+.settings/*
+*.idea
+atlassian-ide-plugin.xml
+*/plugin.xml
 
-# Package Files #
-*.jar
-*.war
-*.ear
