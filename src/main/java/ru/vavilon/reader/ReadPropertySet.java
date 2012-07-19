@@ -18,16 +18,18 @@ public class ReadPropertySet {
 
         PropertyEntry propertyEntry;
         for (Section section : propertySet.getSections()) {
-            Object[] objects = section.getDictionary().entrySet().toArray();
+            Map<Long, String> objects = section.getDictionary();
             Property[] properties = section.getProperties();
 
-            for (int i = 0; i < objects.length; i++) {
+            Property property;
+            for (int i = 0; i < objects.size(); i++) {
+                property = properties[i];
                 propertyEntry = new PropertyEntry();
-                propertyEntry.setKey(((Map.Entry) objects[i]).getValue().toString());
-                propertyEntry.setValue(properties[i].getValue().toString());
+                propertyEntry.setKey(objects.get(property.getID()));
+                propertyEntry.setValue(property.getValue().toString());
                 propertyEntry.setIndex(i);
+                propertyEntry.setType(property.getType());
                 propertyEntry.setDocumentName(docName);
-
                 result.add(propertyEntry);
             }
         }

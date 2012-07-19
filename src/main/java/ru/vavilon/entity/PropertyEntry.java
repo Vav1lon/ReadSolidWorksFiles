@@ -5,6 +5,7 @@ public class PropertyEntry {
     String key;
     String value;
     int index;
+    long type;
     String documentName;
 
     public String getKey() {
@@ -37,5 +38,13 @@ public class PropertyEntry {
 
     public void setDocumentName(String documentName) {
         this.documentName = documentName;
+    }
+
+    public long getType() {
+        return type;
+    }
+
+    public void setType(long type) {
+        this.type = type;
     }
 }

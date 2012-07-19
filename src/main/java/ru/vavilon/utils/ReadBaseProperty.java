@@ -18,7 +18,7 @@ public class ReadBaseProperty {
     public static void main(String[] args) throws IOException {
 
         ReadDocumentNode readDocumentNode = new ReadDocumentNode();
-        POIFSFileSystem poifsFileSystem = new ReadFile().getPoiFSFileSystem("/path/to/file");
+        POIFSFileSystem poifsFileSystem = new ReadFile().getPoiFSFileSystem("/home/vikont/Downloads/5ov.SLDDRW");
 
         PropertySet documentSummaryInformation = readDocumentNode.read(poifsFileSystem, DocumentSummaryInformation.DEFAULT_STREAM_NAME);
         PropertySet summaryInformation = readDocumentNode.read(poifsFileSystem, SummaryInformation.DEFAULT_STREAM_NAME);
