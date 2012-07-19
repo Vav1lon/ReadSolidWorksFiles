@@ -20,11 +20,11 @@ public class ReaderTree {
 
     private void readNode(Entry node) {
         if (node.isDocumentEntry()) {
-            System.out.println(" == Directory name: " + ((Entry) node.getParent()).getName() + " -- Document: " + node.getName());
+            System.out.println(" == Directory name: " + node.getParent().getName() + " -- Document: " + node.getName());
         }
         if (node.isDirectoryEntry()) {
             System.out.println("");
-            System.out.println(" == Directory name: " + ((Entry) node).getName());
+            System.out.println(" == Directory name: " + node.getName());
             readIterator(((DirectoryNode) node).getEntries());
             System.out.println("");
         }
